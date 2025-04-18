@@ -1,0 +1,7 @@
+<div *ngIf="data">
+    <section class="hero">
+        <h1>{{ data.title }}</h1> <!-- Убрано .hero -->
+        <img img class="poster-img" [src]="data.image" alt="Hero image"> <!-- Убрано .hero -->
+        <button class="watch-button">Смотреть</button>
+    </section>
+</div>
