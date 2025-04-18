@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<div *ngIf="isLoading" class="loader">Загрузка...</div>
+
+<div *ngIf="data">
+    <app-hero *ngIf="data?.hero" [data]="data.hero"></app-hero>
+  
+  <app-movie-category 
+    *ngIf="data.movies"
+    title="Популярное" 
+    [movies]="data.movies">
+  </app-movie-category>
+</div>
+
+<app-footer></app-footer>

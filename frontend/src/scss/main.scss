@@ -1,0 +1,15 @@
+// Используйте только @use (новый синтаксис)
+@use 'variables' as *;
+@use './footer.component';
+@use './header.component';
+@use './hero.component';
+@use './movie-category.component';
+@use './home.component';
+
+// Глобальные стили (после всех @use)
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $bck-color;
+}
+

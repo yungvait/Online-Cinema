@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+.hero {
+    display: flex;
+    justify-content: center;
+    margin: -200px 0px 0px 0px;
+    position: relative;
+    height: 100vh;
+    .poster-img {
+        
+        width: 95%;
+        border-radius: 50px;
+        opacity: 0.5;
+        z-index: -1;
+        
+    }
+    h1 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    z-index: 2;
+    font-size: 3rem;
+  }
+
+}
+
+.watch-button {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    padding: 20px 80px;
+    background: linear-gradient(
+    45deg, /* Направление градиента (можно изменить на to right, 90deg и т.д.) */
+    #FFD700 0%,      /* Ярко-желтый */
+    #FFA500 30%,     /* Оранжевый */
+    #FF4500 60%,     /* Красно-оранжевый */
+    #FF0000 100%     /* Чистый красный */
+    );
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.watch-button:hover {
+    /* Увеличиваем кнопку на 5% */
+    transform: scale(1.05);
+}
