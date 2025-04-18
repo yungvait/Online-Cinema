@@ -1,5 +1,6 @@
 # Online-Cinema
 Cinema
+<<<<<<< HEAD
 
 
 # Backend
@@ -72,3 +73,33 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# Frontend
+
+=======
+## Системные требования
+```bash
+- Node.js v16.14+ 
+- npm v8.5+
+- Angular CLI v15+
+```
+>>>>>>> eca3bc4 (Update README.md)
+### 1. Клонировать репозиторий
+```bash
+https://github.com/yungvait/Online-Cinema.git
+cd Online-Cinema/frontend
+```
+
+### 2. Установить зависимости
+```bash
+npm install
+```
+
+### 3. Запустить сервер разработки
+```bash
+ng serve
+```
+Приложение будет доступно по адресу:
+```bash
+http://localhost:4200
+```

@@ -7,7 +7,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+           "style": "scss",
+           "skipTests": true,
+            "changeDetection": "OnPush"
         }
       },
       "root": "",
@@ -17,6 +19,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/scss"
+              ]
+            },
             "outputPath": "dist/frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -26,13 +33,15 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/main.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -83,6 +92,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+
+            "main": "src/test.ts",
+            "karmaConfig": "karma.conf.js",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -90,14 +102,21 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/main.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/scss"
+              ]
+            },
             "scripts": []
           }
         }
