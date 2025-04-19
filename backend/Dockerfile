@@ -9,9 +9,7 @@ WORKDIR /src
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen
 COPY src/ /src
+COPY db/ /db
 
-RUN useradd -m appuser && chown -R appuser:appuser /src
-
-USER appuser
 
 ENTRYPOINT ["uv", "run"]
