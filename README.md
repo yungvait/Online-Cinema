@@ -1,6 +1,11 @@
 # Online-Cinema
 Cinema
-
+## Системные требования
+```bash
+- Node.js v16.14+ 
+- npm v8.5+
+- Angular CLI v15+
+```
 ### 1. Клонировать репозиторий
 ```bash
 https://github.com/yungvait/Online-Cinema.git
